@@ -3,36 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <!-- SEO Primary Meta Tags -->
-  <title>Alexander van der Berg – ISTQB Certified Tester | Software Quality Assurance Zurich</title>
+  <title>Alexander van der Berg | ISTQB Certified Tester | Software Quality Assurance Zurich</title>
   <meta name="description" content="Experienced Software Quality Assurance expert based in Zurich. 15+ years of experience, ISTQB and OSCP+ certified. Functional testing, security testing, test automation.">
-  <meta name="keywords" content="Software Quality Assurance, ISTQB Tester, Software Testing, Zurich, Test Automation, Security Testing, Penetration Testing, OSCP, BSCP, CISSP, Contractor">
   <meta name="author" content="Alexander van der Berg">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1a1a2e">
   <link rel="canonical" href="https://www.vanderberg.de/">
   <link rel="alternate" hreflang="en" href="https://www.vanderberg.de/" />
   <link rel="alternate" hreflang="de" href="https://www.vanderberg.ch/" />
-  <link rel="alternate" hreflang="x-default" href="https://www.vanderberg.ch/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.vanderberg.de/" />
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.vanderberg.de/">
-  <meta property="og:title" content="Alexander van der Berg – ISTQB Certified Tester | Software Quality Assurance Zurich">
+  <meta property="og:title" content="Alexander van der Berg | ISTQB Certified Tester | Software Quality Assurance Zurich">
   <meta property="og:description" content="Experienced Software Quality Assurance expert based in Zurich. 15+ years of experience, ISTQB and OSCP+ certified. Functional testing, security testing, test automation.">
   <meta property="og:image" content="https://www.vanderberg.de/images/portrait.webp">
+  <meta property="og:image:width" content="680">
+  <meta property="og:image:height" content="1014">
+  <meta property="og:image:alt" content="Portrait of Alexander van der Berg">
   <meta property="og:locale" content="en_GB">
   <meta property="og:site_name" content="Alexander van der Berg">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Alexander van der Berg – ISTQB Certified Tester">
+  <meta name="twitter:title" content="Alexander van der Berg | ISTQB Certified Tester">
   <meta name="twitter:description" content="15+ years of Software QA. ISTQB, OSCP+, CISSP Associate. Available for projects in Zurich and remote.">
   <meta name="twitter:image" content="https://www.vanderberg.de/images/portrait.webp">
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -52,7 +55,8 @@
     },
     "sameAs": [
       "https://www.linkedin.com/in/avanderberg/",
-      "https://github.com/avanderberg"
+      "https://github.com/avanderberg",
+      "https://www.vanderberg.ch/"
     ],
     "knowsLanguage": ["de", "en", "es"],
     "hasCredential": [
@@ -96,7 +100,11 @@
       --shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-padding-top: 60px; }
+
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+    }
 
     body {
       font-family: var(--font-sans);
@@ -245,7 +253,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('images/hero-bg.jpg');
+      background-image: url('images/hero-bg.webp');
       background-size: cover;
       background-position: center;
       opacity: 0.18;
@@ -652,7 +660,7 @@
 
     .form-group input::placeholder,
     .form-group textarea::placeholder {
-      color: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.5);
     }
 
     .form-group select option { background: var(--color-primary); }
@@ -660,7 +668,7 @@
 
     .form-note {
       font-size: 0.8rem;
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.65);
       margin-top: 0.75rem;
     }
 
@@ -693,17 +701,19 @@
     }
 
     footer p {
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.65);
       font-size: 0.85rem;
     }
 
     .footer-links {
       display: flex;
-      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem 1.5rem;
     }
 
     .footer-links a {
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.65);
       font-size: 0.85rem;
       transition: color 0.2s;
     }
@@ -727,8 +737,6 @@
       }
 
       .nav-links.open { display: flex; }
-
-      .nav { position: sticky; }
 
       /* Hero */
       .hero-content {
@@ -791,7 +799,7 @@
         <p class="section-label">Software Quality Assurance</p>
         <h1>Your product deserves <span>flawless</span> code</h1>
         <p class="subtitle">
-          With 15+ years of experience, I find bugs before your customers do –
+          With 15+ years of experience, I find bugs before your customers do,
           covering functionality, security, and cross-device compatibility.
         </p>
         <div class="hero-badges">
@@ -812,7 +820,7 @@
           alt="Alexander van der Berg, ISTQB Certified Tester in Zurich"
           class="hero-photo"
           width="340"
-          height="507"
+          height="440"
           loading="eager"
         >
       </div>
@@ -820,14 +828,14 @@
   </section>
 
   <!-- TRUST BAR -->
-  <div class="trust-bar" aria-label="Key competencies">
+  <section class="trust-bar" aria-label="Availability and languages">
     <div class="trust-bar-inner">
       <span class="trust-item">✓ Available to start on-site tomorrow, schedule permitting</span>
       <span class="trust-item">✓ Minimum project duration of one week</span>
       <span class="trust-item">✓ On-site in Zurich & Remote</span>
       <span class="trust-item">✓ German · English · Spanish</span>
     </div>
-  </div>
+  </section>
 
   <!-- ABOUT -->
   <section id="about" aria-labelledby="about-heading">
@@ -838,8 +846,8 @@
             src="images/photo-on-computer.webp"
             alt="Alexander van der Berg at work"
             class="about-photo"
-            width="900"
-            height="1200"
+            width="800"
+            height="1067"
             loading="lazy"
           >
         </div>
@@ -848,7 +856,7 @@
           <h2 id="about-heading">I'm Alexander van der Berg</h2>
           <p>
             As an experienced Software QA Engineer based in Zurich, I'm perfectly positioned
-            to bring your website, app or API to a high standard – free from obvious and
+            to bring your website, app or API to a high standard, free from obvious and
             hidden defects. I guide your product through a series of systematic and thorough
             tests so it performs flawlessly at every release.
           </p>
@@ -1028,8 +1036,7 @@
           <p class="project-sector">Banking</p>
           <h3>Mobile Banking &amp; Web App</h3>
           <ul>
-            <li>Test design, testing and test automation of Android and iOS apps</li>
-            <li>as well as an online banking web application</li>
+            <li>Test design, testing and test automation of Android and iOS apps as well as an online banking web application</li>
             <li>Leading and mentoring junior QA engineers</li>
             <li>Responsible for final release sign-off</li>
             <li>Debugging complex system defects</li>
@@ -1153,8 +1160,8 @@
         <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
           <summary itemprop="name">What are the minimum requirements for a project?</summary>
           <p itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-            <span itemprop="text">The minimum project duration is one week. Day bookings are also acceptable,
-            as long as they are plannable.</span>
+            <span itemprop="text">The minimum project duration is one week. Single days are possible
+            by prior arrangement.</span>
           </p>
         </details>
 
@@ -1195,7 +1202,7 @@
           </p>
           <p>
             Starting tomorrow? Need something finished over the weekend? A particularly
-            short or long project? I enjoy varied and challenging work –
+            short or long project? I enjoy varied and challenging work,
             which is exactly why I work as a contractor.
           </p>
           <div class="contact-links">
@@ -1215,12 +1222,13 @@
         </div>
 
         <div class="contact-form">
-          <!-- Formspree endpoint – replace YOUR_FORM_ID with your Formspree form ID -->
           <form
             id="contact-form"
             action="https://formspree.io/f/mykbggzo"
             method="POST"
           >
+            <input type="hidden" name="_subject" value="Contact form vanderberg.de">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="form-row">
               <div class="form-group">
                 <label for="first-name">First name *</label>
@@ -1321,11 +1329,11 @@
           form.style.display = 'none';
           successMsg.style.display = 'block';
         } else {
-          submitBtn.textContent = 'Error – please contact via email';
+          submitBtn.textContent = 'Error: please contact via email';
           submitBtn.disabled = false;
         }
       } catch {
-        submitBtn.textContent = 'Error – please contact via email';
+        submitBtn.textContent = 'Error: please contact via email';
         submitBtn.disabled = false;
       }
     });
